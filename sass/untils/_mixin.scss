@@ -1,0 +1,21 @@
+@mixin centeredFlex($type:flex) {
+    display: $type;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin  transition ($property:color) {
+    transition-property: $property;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-delay: 0ms;
+} 
+
+@mixin font($ff:Roboto, $color:$main-text, $fw:400, $fz:16px, $fh:1.2, $ls:0.01em) {
+    font-family: $ff;
+    color: $color;
+    font-size: $fz;
+    font-weight: $fw;
+    line-height: $fh;
+    letter-spacing: $ls;
+}

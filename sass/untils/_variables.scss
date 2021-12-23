@@ -1,0 +1,150 @@
+// Переменные и глобальные стили
+
+
+/*  цвет основного текста #212121 */
+/* Вторичный цвет текста  #757575 */
+/* Белый #FFFFFF */
+/* Акцент #2196F3;
+ */
+/* Вторичный цвет фона #E5E5E5 */
+/* Третичный цвет фона #2F303A */
+
+/* Portfolio.html 
+Фильтр background: #F5F4FA;*/
+
+$main-text: #212121;
+$second-text: #757575;
+$third-text: #FFFFFF; 
+
+$main-background: #FFFFFF; 
+$second-background:#E5E5E5; 
+$third-background:#2F303A; 
+
+$accent:#2196F3;
+
+$portfolio-filter:#F5F4FA;
+
+$icon-color: #AFB1B8; 
+$background-icon-color:#F5F4FA;
+  
+$backdrop: rgba(0, 0, 0, 0.2); 
+
+
+// глобальные стили
+
+body {
+  background-color: $main-background;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: $main-text;
+
+  text-align: left;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+h1,
+h2, 
+h3,
+h4,
+h5, 
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visibility {
+  visibility: hidden;
+  margin: 0;
+  font-size: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.container {
+  min-width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  
+}
+
+.section {
+  padding-bottom: 60px;
+  
+
+  @media screen and (mix-width:768px) {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+
+  @media screen and (mix-width:1200px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+}
+
+.img { 
+  display: block; 
+  max-width:100%; 
+  height: auto;
+}
+
+// настройки списков
+.list {
+  list-style: none;
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+.button { 
+  color: $third-text;
+  background-color: $accent;
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+
+  min-width: 200px ;
+  min-height: 50px;
+  margin-top: 0px;
+  padding: 0;
+
+  border: 0;
+  border-radius: 4px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+// Стилизация заголовков секций h2 
+.section__title { 
+  text-align: center;
+
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.16;
+  color: $main-text;
+  
+  margin-top: 0;
+  margin-bottom: 50px;
+}

@@ -1,0 +1,33 @@
+
+.feature {
+    padding-top: 60px;
+}
+
+@media screen and (max-width:1200px) {
+    
+    .feature__item:nth-child(-n+3) { 
+        margin-bottom: 30px;
+    }
+}
+
+
+.feature__icon__container { 
+    @include centeredFlex();
+
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+}
+
+.feature__title {
+    @include centeredFlex();
+    margin-bottom: 10px;
+    
+}
+
+.feature__text {
+    @include font($color:$second-text, $fz:14px, $fw:400, $fh:1.71, $ls:0.03em);
+  
+}
+
+

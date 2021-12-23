@@ -1,0 +1,83 @@
+.header { 
+    border-bottom: 1px solid #ECECEC;
+}
+
+.header_container { 
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media screen and (min-width:768px) {
+
+    }
+}
+
+// Бургер
+
+.button-menu { 
+    border: none;
+    background-color: $main-background;
+    cursor: pointer;
+
+    margin-left: auto;
+    padding: 0;
+
+    & .icon-cross { 
+        display: none;
+    }
+
+    &.is-open .icon-cross { 
+        display: block;
+    }
+
+    &.is-open .icon-menu {
+        display: none;
+    }
+}
+
+
+// Окно с контактами и навигацией
+
+.menu-nav { 
+    position: absolute;
+    display: none;
+
+    left: 0;
+    top: 100%;
+    width: 100%;
+
+    background-color: teal;
+
+    &.is-open { 
+        display: block;
+    }
+}
+
+
+// Навигация 
+
+.nav__list { 
+    padding-top: 48px;
+    padding-left: 40px;
+
+    margin-bottom: 300px;
+}
+
+.nav__link {
+
+    @include centeredFlex(flex);
+    @include transition();
+    @include font($color:$main-text, $fz:40px, $fw:500, $fh:1.17, $ls:0.02em);
+
+    position: relative;
+
+  
+    &:hover, 
+    &:focus { 
+    color: $accent; 
+  }
+  }

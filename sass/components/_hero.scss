@@ -1,0 +1,20 @@
+.hero { 
+    color:$third-text;
+    background-color: $third-background;
+    text-align: center;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    background-image:
+    linear-gradient(rgba(47, 48, 58, 0.4),
+   rgba(47, 48, 58, 0.4)),
+    url(../../images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero__title { 
+    margin-bottom: 30px;
+}
