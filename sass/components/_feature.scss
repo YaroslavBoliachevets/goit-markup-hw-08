@@ -3,13 +3,23 @@
     padding-top: 60px;
 }
 
-@media screen and (max-width:1200px) {
-    
-    .feature__item:nth-child(-n+3) { 
-        margin-bottom: 30px;
-    }
+.feature__list { 
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
 }
 
+.feature__item {
+    width: 100%;
+    margin: 15px;
+    @media screen and (min-width:768px) {
+        width: calc((100% - 2 * 30px) / 2);
+    }
+    
+    @media screen and (min-width:1200px) {
+        width: calc((100% - 4 * 30px) / 4);
+    }
+}
 
 .feature__icon__container { 
     @include centeredFlex();
@@ -27,6 +37,7 @@
 
 .feature__text {
     @include font($color:$second-text, $fz:14px, $fw:400, $fh:1.71, $ls:0.03em);
+
   
 }
 
