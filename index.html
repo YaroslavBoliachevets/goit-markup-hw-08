@@ -81,7 +81,6 @@
     </header>
 
     <!-------------------Герой--------------------------------->
-
     <section class="hero">
       <div class="container">
         <h2 class="hero__title">Эффективные решения <br> для вашего бизнеса</h2>
@@ -92,7 +91,6 @@
     </section>
     
     <!------------------Особенности--------------------->
-
     <section class="feature section"> 
       <div class="container">
         <h2  class="visibility">Скрытый заголовок </h2>
@@ -159,6 +157,45 @@
             </div>
           </li>
         
+        </ul>
+      </div>
+    </section>
+
+    <!---------------------- Чем мы занимаемся---------------->
+    <section class="about section">
+      <div class="container">
+        <h2 class="about__title section__title">Чем мы занимаемся</h2>
+        <ul class="about__list list">
+
+          <!-- 1 карточка -->
+          <li class="about__item">
+            <div class="about__meta">
+              <img class="img" src="images/box1.jpg" alt="работа с кодом" width="370"  height="294" />
+              <div class="about__after__title">
+                <p class="about__label">Десктопные приложения</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- 2 карточка -->
+          <li class="about__item">
+            <div class="about__meta">
+              <img class="img" src="images/box2.jpg" alt="разработка приложения" width="370" height="294" />
+              <div class="about__after__title">
+                <p class="about__label">Мобильные приложения</p>
+              </div>
+            </div>
+          </li>
+
+          <!-- 3 карточка -->
+          <li class="about__item">
+            <div class="about__meta">
+              <img class="img" src="images/box3.jpg" alt="разработка дизайна" width="370" height="294" />
+              <div class="about__after__title">
+                <p class="about__label">Дизайнерские решения</p>
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </section>
@@ -413,6 +450,84 @@
       </div>
       </section>
 
+
+    <!-----------------------------Футер ---------------------->
+    <footer class="footer">
+      <div class="container footer-wrap">
+
+        <!-- Контейнер с лого и адресами -->
+        <div class="footer__information">
+          <!-- Лого-->
+          <div class="logo">
+            <a href="./index.html" class="logo__link logo--footer"> <span class="logo__accent">Web</span>  Studio</a>
+          </div>
+          <!--Адрес-->
+          <address class="footer__address">
+            <ul class="footer__address__list list">
+
+              <li class="footer__address__item"><a href="/" class="footer__address__link address"> г. Киев, пр-т Леси Украинки, 26</a></li>
+
+              <li class="footer__address__item"><a href="mailto:info@example.com" class="footer__address__link">info@example.com</a></li>
+
+              <li class="footer__address__item"><a href="tel:+380991111111" class="footer__address__link">+38 099 111 11 11</a></li>
+            </ul>
+          </address>
+        </div>
+
+        <!-- Контейнер с соц сетями -->
+        <div class="footer__social">
+          <h2 class="footer__social__title">присоединяйтесь</h2>
+          <ul class="footer__social__list list">
+            <li class="footer__social__item">
+              <a href="" class="footer__social__link">
+                <svg class="footer__socail__icon" width=22px height=22px>
+                  <use class="footer__icon" href='./images/icons.svg#icon-instagram'></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="footer__social__item">
+              <a href="" class="footer__social__link">
+                <svg class="footer__socail__icon" width=22px height=22px>
+                  <use class="footer__icon" href='./images/icons.svg#icon-twitter'></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="footer__social__item">
+              <a href="" class="footer__social__link">
+                <svg class="footer__socail__icon" width=22px height=22px>
+                  <use class="footer__icon" href='./images/icons.svg#icon-facebook'></use>
+                </svg>
+              </a>
+            </li>
+
+            <li class="footer__social__item">
+              <a href="" class="footer__social__link">
+                <svg class="footer__socail__icon" width=22px height=22px>
+                  <use class="footer__icon" href='./images/icons.svg#icon-linkedin'></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- контейнер с подпииской -->
+        <div class="footer__submit__container">
+          <form action="#" name="submit" class="footer__form">
+            <p class="footer__form__text">Подпишитесь на рассылку </p>
+            <div class="footer__actions">
+              <input type="email" class="footer__actions__mail" placeholder="E-mail">
+              <button type="submit" class="footer__button button">подписаться 
+                <svg class="footer__submit__icon" width='24' height='24'>
+                  <use href='./images/icons.svg#icon-send'></use>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
 
 
 
