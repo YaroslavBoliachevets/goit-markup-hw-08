@@ -17,9 +17,12 @@
         
     }
 
-    @media screen and (min-width:480px) {
-        @include centeredFlex();
+    @media screen and (min-width:1200px) {
+        justify-content: center;
+        
     }
+
+
     
     & .filter__btn:hover, 
     & .filter__btn:focus { 
