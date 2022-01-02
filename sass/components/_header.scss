@@ -26,6 +26,12 @@
     margin-left: auto;
     padding: 0;
 
+    &:hover, &:focus { 
+        fill: $accent;
+    }
+
+    @include transition ($property:fill);
+
     & .icon-cross { 
         display: none;
     }

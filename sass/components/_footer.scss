@@ -46,8 +46,13 @@ justify-content: center;
 }
 
 .footer__address__item { 
+    @media screen and (max-width:1199px) {
+        justify-content: center;
+    }
     display: flex;
-    justify-content: center;
+
+    margin-bottom: 10px;
+    
 }
 
 .footer__address__link { 
@@ -85,9 +90,13 @@ justify-content: center;
     @include font($color:$third-text, $fw:700, $fz:14px, $fh:1.14, $ls:0.03em);
 
     text-transform: uppercase;
-    text-align: center;
+    
 
     margin-bottom: 16px;
+
+    @media screen and (max-width:1199px) {
+        text-align: center;
+    }
 }
 
 .footer__social__list { 

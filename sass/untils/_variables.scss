@@ -78,18 +78,24 @@ a {
 }
 
 .container {
-  min-width: 320px;
+  min-width: 290px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
   
+  @media screen and (min-width:768px) {
+    width: 768px;
+    
+  }
+
+  @media screen and (min-width:1200px) {
+    width: 1200px;
+    
+  }
 }
 
 .section {
-
-  @media screen and (min-width:768px) {
     padding-top: 60px;
-  }
 
   @media screen and (min-width:1200px) {
     padding-top: 94px;

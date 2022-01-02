@@ -4,7 +4,12 @@
     text-align: center;
 
     padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 120px; 
+
+    @media screen and (min-width:1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
 
     background-image:
     linear-gradient(rgba(47, 48, 58, 0.4),
@@ -17,4 +22,11 @@
 
 .hero__title { 
     margin-bottom: 30px;
+
+    @include font($ff:Roboto, $color:$third-text, $fw:900, $fz:26px, $fh:1.6, $ls:0.06em);
+
+    @media screen and (min-width:1200px) {
+        @include font($ff:Roboto, $color:$third-text, $fw:900, $fz:44px, $fh:1.36, $ls:0.06em);
+    }
+
 }

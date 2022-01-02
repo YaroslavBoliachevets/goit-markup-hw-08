@@ -1,0 +1,210 @@
+
+.form__title  { 
+    margin-bottom: 30px;
+  
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+  
+    color: $main-text;
+}
+  
+.modal__information {
+    position: relative;
+    margin-bottom: 30px;
+}
+  
+  
+.modal__information__name { 
+    position: absolute;
+    top: -18px;
+    left: 0;
+    text-transform: capitalize;
+  
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.15;
+  
+    letter-spacing: 0.01em;
+  
+    color: $second-text;
+  
+    /* лейбл выезажет из инпута */
+    /*top: 50%;
+      left: 30px;
+      transform: translateY(-50%);
+      text-transform: capitalize;
+      transition-duration: 250ms;
+      transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1) ;
+      transition-delay: 0ms; 
+    */
+}
+  
+.modal__information__input { 
+    @include transition(border-color);
+
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+  
+    padding-left: 42px;
+    padding-right: 15px;
+  
+    outline: none;
+
+    &:focus {
+        border-color: $accent;
+    }
+}
+  
+  
+/* лейбл выезжает из инпута */
+  /* .modal-form-input:focus + .modal-name {
+    top: -18px;
+    left: 0;
+    transform: translateY(0);
+} */
+  
+.modal__information__icon { 
+    @include transition(fill);
+
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+  
+
+    .modal__information__input:focus + & {
+        fill: $accent;
+    }
+}
+  
+.modal__feedback { 
+    position: relative;
+    margin-bottom: 20px;
+}
+  
+.modal__feedback__label { 
+    display: inline-block;
+    
+    position: absolute;
+    top: -18px;
+    left: 0;
+    text-transform: capitalize;
+
+    @include font($color:$second-text, $fw:400,$fz:12px, $fh:1.15, $ls:0.01em)
+  
+    /* лейбл выезжает из инпута */
+    /* top: 19px;
+    left: 16px;
+    transform: translateY(-50%);
+    text-transform: capitalize;
+    transition-duration: 250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1) ;
+    transition-delay: 0ms; */
+}
+  
+/* .feedback:focus + .modal-feedback {
+    top: -18px;
+    left: 0;
+    transform: translateY(0);
+ } */
+  
+.modal__feedback__text { 
+    padding: 12px 16px;
+    width: 100%;
+    resize: none;
+  
+    @include font($color:$second-text, $fw:400, $fz:12px, $fh:1.15, $ls:0.01em);
+  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+
+    &:focus {
+        border-color: $accent;
+    }
+
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.15;
+        
+        letter-spacing: 0.01em;
+        
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+  
+.modal__checkbox { 
+    position: relative;
+}
+  
+.modal__checkbox__label { 
+    @include centeredFlex();
+    @include font($color:$second-text, $fw:400, $fz:14px, $fh:1.71, $ls:0.03em);
+
+    @media screen and (max-width:479px) {
+        line-height: 2;
+    }
+
+    @media screen and (max-width:1199px) {
+        flex-wrap: wrap;
+        justify-content: start;
+        @include font($fz:12px);
+    }
+
+    cursor: pointer;
+}
+  
+.modal__checkbox__span { 
+    @include centeredFlex();
+    @include transition($property:all);
+    /* иконка не оч нравится */
+    /* position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(50%); */
+    margin-right: 10px;
+
+
+  
+    width: 16px;
+    height: 15px;
+  
+    border: 2px solid rgba(33, 33, 33, 1);
+    border-radius: 2px;
+
+    .modal__checkbox__input:checked + .modal__checkbox__label & { 
+        background-color: $accent;
+        border-color: $accent;
+    }
+}
+  
+  
+  
+.modal__checkbox__icon {
+    fill: #FFFFFF;
+}
+  
+.modal__checkbox__link { 
+    @include font($color:$accent, $fw:400, $fz:14px, $fh:1.71, $ls:0.03em);
+
+    text-decoration: underline;
+
+    @media screen and (max-width:1199px){
+        @include font( $color:$accent, $fz:12px);
+    }
+}
+  
+.form__button { 
+    display:block;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+
+    text-transform: capitalize;
+}  
