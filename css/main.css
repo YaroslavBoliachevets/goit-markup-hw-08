@@ -212,7 +212,14 @@ a {
 }
 
 .nav__mobile__list {
+  display: block;
   margin-bottom: 300px;
+}
+
+@media screen and (max-width: 479px) {
+  .nav__mobile__list {
+    margin-bottom: 150px;
+  }
 }
 
 .nav__mobile__item {
@@ -1353,12 +1360,6 @@ a {
   margin: 15px;
   justify-content: center;
   align-items: stretch;
-}
-
-@media screen and (max-width: 479px) {
-  .portfolio__item {
-    width: 100%;
-  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 767px) {
