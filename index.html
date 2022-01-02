@@ -34,24 +34,70 @@
           <a href="./index.html" class="logo__link logo__link_header"> <span class="logo__accent">Web</span>  Studio</a>
         </div>
 
-        <!-- Кнопка навигации -->
+        <!-- Мобильная кнопка навигации -->
         <button 
         type="button" 
-        class="button-menu"
+        class="button-menu js-open-menu"
         aria-expanded="false" 
-        aria-controls="menu-nav"
-        data-menu-button>
+        aria-controls="mobile-menu">
           <svg width=40px height=40px aria-label="Переключатель мобильного меню"> 
             <use class="icon-menu" href="images/icons.svg#icon-menu">
-            </use>
-            <use class="icon-cross" href="images/icons.svg#icon-cross">
             </use>
           </svg>
         </button>
         
-        <!-- Меню навигации -->
-        <div class="menu-nav" id="menu-nav" data-menu>
+        <!-- Мобильное меню навигации  -->
+        <div class="menu-container js-menu-container" id="mobile-menu" data-menu>
+
+          <button 
+        type="button" 
+        class="button-menu button-menu-close js-close-menu"
+        aria-expanded="false" 
+        aria-controls="mobile-menu">
+          <svg class="menu__icon__cross" width=40px height=40px aria-label="Переключатель мобильного меню"> 
+            <use class="icon-menu"  href='./images/icons.svg#icon-cross'>
+            </use>
+          </svg>
+          </button>
+
+          <nav class="nav_mobile">
           
+            <ul class="nav__mobile__list list">
+              <li class="nav__mobile__item"><a class="nav__mobile__link" href="./index.html" >Студия </a></li>
+              <li class="nav__mobile__item"><a class="nav__mobile__link" href="./portfolio.html">Портфолио</a></li>
+              <li class="nav__mobile__item"><a class="nav__mobile__link" href="./contacts.html" >Контакты </a></li>
+            </ul>
+          </nav>
+          
+          <div class="contacts__mobile">
+            <ul class="contacts__mobile__list list"> 
+              <li class="contacts__mobile__item"><a href="tel:+380961111111" class="contacts__mobile__link contacts__mobile__link-tel">
+                +380961111111 </a></li>
+
+              <li class="contacts__mobile__item"><a href="mailto:info@devstudio.com" class="contacts__mobile__link contacts__mobile__link-mail">
+                info@devstudio.com</a> </li>
+              
+
+              
+            </ul>
+          </div>
+
+          <div class="header__social">
+            <ul class="header__social__list list">
+              <li class="header__social__item"><a class="header__social__link" href="#">Instagram</a></li>
+              <li class="header__social__item"><a class="header__social__link" href="#">Twitter</a></li>
+              <li class="header__social__item"><a class="header__social__link" href="#">Facebook</a></li>
+              <li class="header__social__item"><a class="header__social__link" href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+
+
+        </div>
+
+        <!-- Меню таблетка-комп -->
+        <div class="menu-wrap">
+
+          <!-- Навигация-->
           <nav class="nav">
           
             <ul class="nav__list list">
@@ -61,6 +107,7 @@
             </ul>
           </nav>
           
+          <!-- Контакты-->
           <div class="contacts">
             <ul class="contacts__list list"> 
               <li class="contacts__item"><a href="mailto:info@devstudio.com" class="contacts__link">
@@ -75,11 +122,13 @@
               
             </ul>
           </div>
-
         </div>
+        
 
       </div> 
     </header>
+
+
 
   <main>
     <!-------------------Герой--------------------------------->
@@ -504,7 +553,7 @@
 
         <!-- комментарий -->
         <div class="modal__feedback">
-          <textarea name="feedback" id="feedback" cols="30" rows="10"
+          <textarea name="feedback" id="feedback" cols="30" rows="8"
           class="modal__feedback__text"
           placeholder="Введите текст"></textarea>
           <label for="feedback" class="modal__feedback__label">комментарий</label>
@@ -613,7 +662,16 @@
 
 
 
-    <script src="./js/menu.js"></script>
+    <!-- <script src="./js/menu.js"></script> -->
     <script src="./js/modal.js"></script>
+
+    <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+    >
+    </script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

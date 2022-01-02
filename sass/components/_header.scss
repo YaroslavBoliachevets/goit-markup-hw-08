@@ -19,6 +19,10 @@
 // Бургер
 
 .button-menu { 
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
     border: none;
     background-color: $main-background;
     cursor: pointer;
@@ -48,34 +52,49 @@
 
 // Окно с контактами и навигацией
 
-.menu-nav { 
-    position: absolute;
-    display: none;
+.menu-container { 
+    position: fixed;
 
+    top: 0;
     left: 0;
-    top: 100%;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
 
-    background-color: teal;
+    padding: 48px 40px;
 
-    &.is-open { 
-        display: block;
-    }
+    background-color: $main-background;
+
+    transform: translateX(100%);
+
+    @include transition($property:transform);
+
+}
+
+.menu-container.is-open { 
+    transform: translateX(0);
+}
+
+.button-menu-close {
+    position: absolute;
+
+    top: 10px;
+    right: 15px;
 }
 
 
 // Навигация 
 
-.nav__list { 
-    padding-top: 48px;
-    padding-left: 40px;
-
+.nav__mobile__list { 
     margin-bottom: 300px;
 }
 
-.nav__link {
+.nav__mobile__item { 
+    margin-bottom: 32px;
+}
 
-    @include centeredFlex(flex);
+.nav__mobile__link {
+    display: flex;
+
     @include transition();
     @include font($color:$main-text, $fz:40px, $fw:500, $fh:1.17, $ls:0.02em);
 
@@ -86,4 +105,181 @@
     &:focus { 
     color: $accent; 
   }
+}
+
+.contacts__mobile { 
+    margin-bottom: 64px;
+}
+
+.contacts__mobile__link { 
+    @include centeredFlex(inline-flex);
+    @include transition();
+
+  
+    &:hover, 
+    &:focus { 
+    color: $accent; 
   }
+}
+
+  .contacts__mobile__link-tel { 
+    @include font($color:$second-text, $fz:34px, $fw:500, $fh:1.17, $ls:0.02em);
+
+    margin-bottom: 32px;
+}
+
+.contacts__mobile__link-mail { 
+    @include font($color:$second-text, $fz:28px, $fw:500, $fh:1.17, $ls:0.02em);
+}
+
+.header__social__list { 
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header__social__item {
+
+    position: relative;
+
+    
+
+    // &::after { 
+    //     content: '';
+    //     width: 1px;
+    //     height: 22px;
+    //     background-color: blueviolet;
+
+    //     position: absolute;
+    //     top: 0;
+    //     left: -5px;
+    // }
+
+    &:nth-child(n+2) {
+        margin-left: 10px;
+        padding-left: 5px;
+        border-left: 1px solid #212121;
+    }
+}
+
+.header__social__link { 
+    @include font($color:$accent, $fw:500, $fz:18px, $fh:1.2, $ls:0.02em);
+}
+
+
+
+.menu-wrap { 
+    @media screen and (max-width:767px) {
+        display: none;
+    }
+ 
+    @include centeredFlex(inline-flex);
+    @include transition();
+
+    margin-left: 60px;
+}
+
+.nav__list { 
+    margin-left: auto;
+}
+
+  /* полоска под навигацией   */
+  .nav__link {
+
+    @include font($color:$main-text, $fz:14px, $fw:500, $fh:1.14, $ls:0.02em);
+  
+    position: relative;
+  
+    &:hover, 
+    &:focus { 
+    color: $accent; 
+  }
+  }
+  
+  .current { 
+    color: $accent;
+  
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+  
+      width: 100%;
+      height: 4px;
+      background-color: $accent;
+  
+      @media screen and ( min-width:768px) {
+        bottom: -28px;
+      }
+
+      @media screen and ( min-width:1200px) {
+        bottom: -18px;
+      }
+      
+      left: 0;
+      border-radius: 2px;
+    }
+  }
+  
+  /* --------------------Стилизация навигации------------------- */
+  .contacts__link { 
+    @include centeredFlex(inline-flex);
+    @include transition();
+    @include font($color:$second-text, $fz:14px, $fw:500, $fh:1.14, $ls:0.02em);
+  
+    &:hover, 
+    &:focus { 
+    color: $accent; 
+  }
+  }
+  
+  
+  /* Работает, но не нравится */
+  
+  .nav__list { 
+    display: flex;
+  
+  }
+  
+  .nav__item:nth-child(n+2) { 
+    margin-left: 50px;
+  }
+  
+  
+  .contacts { 
+    margin-left: 80px;
+
+    @media screen and (min-width:1200px) {
+        margin-left: 300px;
+    }
+  }
+  
+  .contacts__list { 
+      @media screen and (min-width:1200px) {
+        display: flex;
+      }
+ 
+}
+  
+.contacts__item{
+    @media screen and (min-width:1200px) {
+        &:nth-child(n+2) { 
+            margin-left: 50px;
+        } 
+    } 
+}
+   
+  
+  .contacts__icon { 
+    margin-right: 10px;
+    color: $second-text;
+  
+    .contacts__link:hover &, 
+    .contacts__link:focus & { 
+    color: $accent; 
+  }
+  }
+  
+  .contacts--icon { 
+    fill: currentColor;
+  }
+  

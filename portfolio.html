@@ -21,62 +21,109 @@
   </head>
 <body>
 
-     <!-----------------------Хедер----------------------------->
+<!-----------------------Хедер----------------------------->
     
-    <header class="header">
-      <div class="container header_container">
+<header class="header">
+  <div class="container header_container">
 
-        <!-- Лого-->
-        <div class="logo" >
-          <a href="./index.html" class="logo__link logo__link_header"> <span class="logo__accent">Web</span>  Studio</a>
-        </div>
+    <!-- Лого-->
+    <div class="logo" >
+      <a href="./index.html" class="logo__link logo__link_header"> <span class="logo__accent">Web</span>  Studio</a>
+    </div>
 
-        <!-- Кнопка навигации -->
-        <button 
-        type="button" 
-        class="button-menu"
-        aria-expanded="false" 
-        aria-controls="menu-nav"
-        data-menu-button>
-          <svg width=40px height=40px aria-label="Переключатель мобильного меню"> 
-            <use class="icon-menu" href="images/icons.svg#icon-menu">
-            </use>
-            <use class="icon-cross" href="images/icons.svg#icon-cross">
-            </use>
-          </svg>
-        </button>
-        
-        <!-- Меню навигации -->
-        <div class="menu-nav" id="menu-nav" data-menu>
+    <!-- Мобильная кнопка навигации -->
+    <button 
+    type="button" 
+    class="button-menu js-open-menu"
+    aria-expanded="false" 
+    aria-controls="mobile-menu">
+      <svg width=40px height=40px aria-label="Переключатель мобильного меню"> 
+        <use class="icon-menu" href="images/icons.svg#icon-menu">
+        </use>
+      </svg>
+    </button>
+    
+    <!-- Мобильное меню навигации  -->
+    <div class="menu-container js-menu-container" id="mobile-menu" data-menu>
+
+      <button 
+    type="button" 
+    class="button-menu button-menu-close js-close-menu"
+    aria-expanded="false" 
+    aria-controls="mobile-menu">
+      <svg class="menu__icon__cross" width=40px height=40px aria-label="Переключатель мобильного меню"> 
+        <use class="icon-menu"  href='./images/icons.svg#icon-cross'>
+        </use>
+      </svg>
+      </button>
+
+      <nav class="nav_mobile">
+      
+        <ul class="nav__mobile__list list">
+          <li class="nav__mobile__item"><a class="nav__mobile__link" href="./index.html" >Студия </a></li>
+          <li class="nav__mobile__item"><a class="nav__mobile__link" href="./portfolio.html">Портфолио</a></li>
+          <li class="nav__mobile__item"><a class="nav__mobile__link" href="./contacts.html" >Контакты </a></li>
+        </ul>
+      </nav>
+      
+      <div class="contacts__mobile">
+        <ul class="contacts__mobile__list list"> 
+          <li class="contacts__mobile__item"><a href="tel:+380961111111" class="contacts__mobile__link contacts__mobile__link-tel">
+            +380961111111 </a></li>
+
+          <li class="contacts__mobile__item"><a href="mailto:info@devstudio.com" class="contacts__mobile__link contacts__mobile__link-mail">
+            info@devstudio.com</a> </li>
           
-          <nav class="nav">
+
           
-            <ul class="nav__list list">
-              <li class="nav__item"><a class="nav__link current" href="./index.html" >Студия </a></li>
-              <li class="nav__item"><a class="nav__link" href="./portfolio.html">Портфолио</a></li>
-              <li class="nav__item"><a class="nav__link" href="./contacts.html" >Контакты </a></li>
-            </ul>
-          </nav>
+        </ul>
+      </div>
+
+      <div class="header__social">
+        <ul class="header__social__list list">
+          <li class="header__social__item"><a class="header__social__link" href="#">Instagram</a></li>
+          <li class="header__social__item"><a class="header__social__link" href="#">Twitter</a></li>
+          <li class="header__social__item"><a class="header__social__link" href="#">Facebook</a></li>
+          <li class="header__social__item"><a class="header__social__link" href="#">LinkedIn</a></li>
+        </ul>
+      </div>
+
+
+    </div>
+
+    <!-- Меню таблетка-комп -->
+    <div class="menu-wrap">
+
+      <!-- Навигация-->
+      <nav class="nav">
+      
+        <ul class="nav__list list">
+          <li class="nav__item"><a class="nav__link " href="./index.html" >Студия </a></li>
+          <li class="nav__item"><a class="nav__link current" href="./portfolio.html">Портфолио</a></li>
+          <li class="nav__item"><a class="nav__link" href="./contacts.html" >Контакты </a></li>
+        </ul>
+      </nav>
+      
+      <!-- Контакты-->
+      <div class="contacts">
+        <ul class="contacts__list list"> 
+          <li class="contacts__item"><a href="mailto:info@devstudio.com" class="contacts__link">
+            <svg class="contacts__icon" width=16px height=20px> <use class="contacts--icon" href='./images/icons.svg#icon-envelope'></use> </svg>
+            info@devstudio.com</a>  </li>
+          <li class="contacts__item"><a href="tel:+380961111111" class="contacts__link">
+            <svg class="contacts__icon" width=16px height=20px>
+              <use class="contacts--icon" href='./images/icons.svg#icon-smartphone'></use>
+            </svg>
+            +380961111111 </a></li>
+
           
-          <div class="contacts">
-            <ul class="contacts__list list"> 
-              <li class="contacts__item"><a href="mailto:info@devstudio.com" class="contacts__link">
-                <svg class="contacts__icon" width=16px height=20px> <use class="contacts--icon" href='./images/icons.svg#icon-envelope'></use> </svg>
-                info@devstudio.com</a>  </li>
-              <li class="contacts__item"><a href="tel:+380961111111" class="contacts__link">
-                <svg class="contacts__icon" width=16px height=20px>
-                  <use class="contacts--icon" href='./images/icons.svg#icon-smartphone'></use>
-                </svg>
-                +380961111111 </a></li>
+        </ul>
+      </div>
+    </div>
+    
 
-              
-            </ul>
-          </div>
-
-        </div>
-
-      </div> 
-    </header>
+  </div> 
+</header>
 
     <!--Контент-->
     <main class="main-portfolio">
