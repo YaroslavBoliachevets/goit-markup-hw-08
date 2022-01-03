@@ -47,12 +47,15 @@
     &.is-open .icon-menu {
         display: none;
     }
+
+
 }
 
 
 // Окно с контактами и навигацией
 
 .menu-container { 
+  z-index: 2;
     position: fixed;
 
     top: 0;
