@@ -438,13 +438,18 @@ a {
 
 .logo--footer {
   display: flex;
-  justify-content: center;
   margin-bottom: 20px;
   color: #FFFFFF;
 }
 
 .logo--footer .logo__accent {
   color: #2196F3;
+}
+
+@media screen and (max-width: 1199px) {
+  .logo--footer {
+    justify-content: center;
+  }
 }
 
 .footer {
@@ -469,6 +474,10 @@ a {
 
 .footer__information {
   margin-bottom: 60px;
+}
+
+.footer__address__list {
+  font-style: normal;
 }
 
 .footer__address__list .footer__address__link:hover,
