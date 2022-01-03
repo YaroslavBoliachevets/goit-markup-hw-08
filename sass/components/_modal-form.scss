@@ -197,6 +197,10 @@
     @media screen and (max-width:1199px){
         @include font( $color:$accent, $fz:12px);
     }
+
+    @media screen and (max-width:479px){
+        margin-left: 26px;
+    }
 }
   
 .form__button { 

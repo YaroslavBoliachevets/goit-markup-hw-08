@@ -1,4 +1,9 @@
 
+.feature { 
+    @media screen and (max-width:1199px) {
+        padding-bottom: 94px;
+    }
+}
 
 .feature__list { 
     display: flex;
@@ -20,9 +25,11 @@
 
 .feature__icon__container { 
     @include centeredFlex();
+    background-color: $second-background;
 
     padding-top: 25px;
     padding-bottom: 25px;
+    margin-bottom: 30px;
 
 }
 
