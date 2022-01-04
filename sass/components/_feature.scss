@@ -36,7 +36,10 @@
 .feature__title {
     @include centeredFlex();
     margin-bottom: 10px;
-    
+
+    @media screen and (min-width:768px) {
+        @include centeredFlex($jc:start);
+    }
 }
 
 .feature__text {

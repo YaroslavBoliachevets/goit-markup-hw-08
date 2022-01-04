@@ -152,6 +152,20 @@ a {
   padding-bottom: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .header_container {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header_container {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
 .button-menu {
   border: none;
   background-color: #FFFFFF;
@@ -343,26 +357,28 @@ a {
   color: #2196F3;
 }
 
-.current::after {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background-color: #2196F3;
-  left: 0;
-  border-radius: 2px;
-}
-
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .current::after {
-    bottom: -28px;
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #2196F3;
+    left: 0;
+    border-radius: 2px;
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 480px) and (min-width: 768px) {
   .current::after {
-    bottom: -18px;
+    bottom: -43px;
+  }
+}
+
+@media screen and (min-width: 480px) and (min-width: 1200px) {
+  .current::after {
+    bottom: -32px;
   }
 }
 
@@ -468,8 +484,10 @@ a {
   }
 }
 
-.footer__information {
-  margin-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .footer__information {
+    margin-bottom: 60px;
+  }
 }
 
 .footer__address__list {
@@ -692,7 +710,7 @@ a {
   margin-right: auto;
   padding-top: 120px;
   padding-bottom: 120px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile-img/hero-mob-1x.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile-img/hero-mob-1x.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -707,7 +725,7 @@ a {
 
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile-img/hero-mob-2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile-img/hero-mob-2x.webp);
   }
 }
 
@@ -800,6 +818,14 @@ a {
   align-items: center;
   justify-content: center;
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .feature__title {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
 }
 
 .feature__text {
@@ -898,7 +924,13 @@ a {
 
 .team__card {
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 1200px) {
+  .team__card {
+    margin-bottom: 30px;
+  }
 }
 
 .team__title {
@@ -928,7 +960,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 24px;
 }
 
 .social__item {

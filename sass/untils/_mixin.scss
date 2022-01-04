@@ -1,7 +1,7 @@
-@mixin centeredFlex($type:flex) {
+@mixin centeredFlex($type:flex, $jc:center) {
     display: $type;
     align-items: center;
-    justify-content: center;
+    justify-content: $jc;
 }
 
 @mixin  transition ($property:color) {
