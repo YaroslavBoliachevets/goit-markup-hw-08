@@ -1496,6 +1496,14 @@ a {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.122), 0px 4px 4px rgba(0, 0, 0, 0.059), 1px 4px 6px rgba(0, 0, 0, 0.161);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
 .portfolio-img {
   display: inline-block;
   margin: 0;
