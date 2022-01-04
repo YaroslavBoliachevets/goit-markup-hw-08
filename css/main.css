@@ -187,8 +187,9 @@ a {
 }
 
 .menu-container {
+  display: flex;
+  flex-direction: column;
   z-index: 2;
-  overflow-y: scroll;
   position: fixed;
   top: 0;
   left: 0;
@@ -215,7 +216,6 @@ a {
 
 .nav__mobile__list {
   display: block;
-  margin-bottom: 300px;
 }
 
 .nav__mobile__item {
@@ -242,6 +242,7 @@ a {
 }
 
 .contacts__mobile {
+  margin-top: auto;
   margin-bottom: 64px;
 }
 
