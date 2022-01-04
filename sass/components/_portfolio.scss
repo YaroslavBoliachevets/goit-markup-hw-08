@@ -68,11 +68,11 @@
 
     @include font($color:$third-text, $fz:18px, $fw:400, $fh:1.56, $ls:0.03em);
 
-    @media screen and (max-width:319px) {
-        padding: 15px;
+    @media screen and (max-width:479px) {
+        padding: 0px;
     }
 
-    @media screen and (min-width:320px) {
+    @media screen and (min-width:480px) {
         padding: 63px 24px;
     }
 }
